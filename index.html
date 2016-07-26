@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JSON</title>
+<script src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var x = '{"Id":1}';
+	var k = JSON.parse(x);//json.parse string ko object bana raha hai
+	//alert(k.Id.toString()); 
+	
+	var x = '[{"Id":1},{"Id":2},{"Id":3},{"Id":4}]';
+	var k = JSON.parse(x);
+	//alert(k[2].Id.toString());
+	
+	$.each(k, function(i, item){
+		alert(item.Id);
+		});
+});
+</script>
+
+</head>
+
+<body>
+</body>
+</html>
