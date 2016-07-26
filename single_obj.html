@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JSON</title>
+<script src="jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+/*    var x = '{"Id":20,"Name":"Mohsin", "Age": 20, "Class":"13th"}';
+	var k = JSON.parse(x);
+	document.write("Name: " + k.Name.toString() + "<br>Id: " + k.Id.toString());
+	document.write("<br> Age: "+k.Age.toString()+"<br>Class: " + k.Class.toString());
+*/
+	var x = '[{"Id":20,"Name":"Mohsin"},{"Id":40,"Name":"Mohsin Ghani"},{"Id":60,"Name":"Muhammad Mohsin"}]';
+	var k = JSON.parse(x);
+	//alert(k[1].Id.toString()+ " " + k[1].Name.toString());
+	$.each(k, function(i,item){
+		alert(item.Id + " " + item.Name);
+		});
+
+});
+</script>
+
+</head>
+
+<body>
+</body>
+</html>
